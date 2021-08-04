@@ -1,14 +1,34 @@
 <template>
   <div id="app">
-    <v-app>
+    <!-- <v-app>
       <p>{{ message }}</p>
-      <user/>
-    </v-app>
+    </v-app> -->
+    <v-app-bar dense color="#164647" dark>
+      <template v-slot:extension>
+        <v-tabs>
+          <v-tab>Innovative Fusion</v-tab>
+          <v-tab>About</v-tab>
+          <v-tab>Faculty</v-tab>
+          <v-tab>Assistant Program</v-tab>
+          <v-tab>Booking Info</v-tab>
+          <v-tab>Merchandise</v-tab>
+          <v-tab>Contact Info</v-tab>
+        </v-tabs>
+      </template>
+    </v-app-bar>
+
+    <v-container
+      class="spacing-playground pa-6"
+      fluid
+    >
+      <faculty/>
+    </v-container>
   </div>
 </template>
 
+
 <script>
-import user from "./packs/components/user.vue";
+import faculty from "./packs/components/faculty/faculty_members.vue";
 export default {
   data: function() {
     return {
@@ -16,7 +36,8 @@ export default {
     };
   },
   components: {
-    user: user
+    faculty: faculty,
+    
   }
 };
 </script>
