@@ -7,7 +7,7 @@
         cols="12"
         sm="3"
       >
-      <v-card>
+      <v-card height="100%">
         <v-img
           :src="faculty.image"
           height="200px"
@@ -21,21 +21,12 @@
           {{faculty.subtitle}}
         </v-card-subtitle>
 
-        <v-card-actions>
-          <v-btn
-            color="orange lighten-2"
-            text
-          >
-            More
-          </v-btn>
-
-          <v-spacer></v-spacer>
-
+        <v-card-actions style="float:right;">
           <v-btn
             icon
             @click="show = !show"
           >
-            <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+            <span class="material-icons">expand_more</span>
           </v-btn>
         </v-card-actions>
 

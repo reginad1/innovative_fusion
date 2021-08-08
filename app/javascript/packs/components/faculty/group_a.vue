@@ -6,39 +6,32 @@
         :key="faculty.id"
         cols="12"
         sm="3"
-        class="pa-3 d-flex flex-column"
       >
-      <v-card>
+      <v-card height="100%">
           <v-img
             :src="faculty.image"
             height="200px"
           ></v-img>
-
-          <v-card-title>
+        
+          <v-card-title class="justify-center">
             {{faculty.title}}
           </v-card-title>
 
-          <v-card-subtitle>
+          <v-card-subtitle height="150px;">
             {{faculty.subtitle}}
           </v-card-subtitle>
 
-          <v-card-actions>
-            <v-btn
-              color="orange lighten-2"
-              text
-            >
-              More
-            </v-btn>
-
-            <v-spacer></v-spacer>
-
-            <v-btn
-              icon
-              @click="show = !show"
-            >
-              <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
-            </v-btn>
+          <v-card-actions style="float:right;"> 
+            <div>
+              <v-btn
+                icon
+                @click="expandCard(faculty.id)"
+              >
+                <span class="material-icons">expand_more</span>
+              </v-btn>
+            </div>
           </v-card-actions>
+
 
           <v-expand-transition>
             <div v-show="show">
@@ -64,7 +57,12 @@
             {id: 3, image: "./../../../app/assets/images/alex_wong_headshot.jpg", title: "Alex Wong", subtitle: " Ballet, Contemporary, Musical Theater", bio: "Alex Wong was born in Canada. In 2000 Alex won two Junior World Titles in Tap and Showdance. Alex won the Audience Choice Award and was a Bronze Medallist in the 2003 Genee International Ballet Competition. In 2004, he became the first Canadian to win the Prix de Lausanne competition in Switzerland. He danced with American Ballet Theatre and was a Principal Soloist with the Miami City Ballet. Alex was a finalist on Season 7 of the FOX hit series 'So You Think You Can Dance' competing for the title of America&apos;s favorite dancer but was sidelined by an injury halfway through the season. Later that year, both pieces Alex danced on So You Think You Can Dance choreographed by Mia Michaels and Tabatha & Napolean both won Emmy Awards. Alex has returned as an All Star for many seasons on SYTYCD and several of his pieces he danced in received Emmy nominations or wins. Alex was also a Semi Finalist on American Idol Season 11 and in 2011, Alex had his Broadway debut, playing the role of 'Sniper' in the Original Broadway Cast of the Disney musical 'Newsies' which won two Tony Awards and received six other Tony nominations. Alex also won the ACCA Award for Outstanding Original Chorus for the Broadway 2011-2012 season and the album was nominated for a Grammy Award. Alex&apos;s recent notable credits include Dancing with the Stars, Taylor Swift, Jonas Brothers, Ariana Grande, Dolly Partons’ “Christmas on the Square, Mariah Carey’s Christmas Special, Rebel Wilson’s “Isn’t It Romantic”, Starz TV series drama 'Flesh & Bone' playing the role of 'Kim', NBC's Peter Pan, Ted 2, Glee, The King & I on Broadway, CW's 'Crazy Ex Girlfriend', Drunk History, The Voice, SNL, The Daily Show, James Corden, Fosse/Verdon, the Billboard Awards with Paula Abdul, The Oscars, Little Mermaid Live, and he has been the cover star of Dance Magazine, Dance Spirit and many others. Alex was a part of the hit movie musical 'The Greatest Showman' starring Hugh Jackman, Zac Efron, Zendaya and Michelle Williams playing the role of 'Oriental Oddity'. He is also part of the film adaptation movie musical “In the Heights” set to premiere in the summer. Alex continues to create content on his social media pages IG and TikTok amassing over 1.5 million followers and is also traveling around the world headlining dance conventions"},
             {id: 4, image: "./../../../app/assets/images/jakob_headshot.jpg", title: "Jakob Karr", subtitle: "Jazz, Contemporary, Musical Theater, Jazz Progressions, Technique", bio: "Originally from Orlando, Florida, Jakob had the pleasure of growing up around theme parks and watching dancers from a very young age. At twelve years old he began dancing and the rest is history! He has been fortunate enough to perform all over the country as well as most of Europe, Australia, Japan and India. Some of his credits include: CATS on Broadway (Mistoffelees Understudy); Cirque Du Soleil’s VOLTA; So You Think You Can Dance Season 6 - Runner Up; The RADIO CITY New York Spectacular (Mia Michaels); Rock the Ballet; VIVA ELVIS by Cirque Du Soleil; Kiss Me Kate at Barrington Stage; Working at City Center ENCORES; The 82nd Annual Academy Awards; America’s Got Talent; GLEE; Company XIV Jakob recently directed and choreographed his first full-length show, “Ain’t Done Bad” for the Orlando Fringe Festival where he took home the award for “BEST SHOW.”"}               
       ]
-    })
+    }),
+    methods: {
+      expandCard: function(faculty_id){
+        console.log(faculty_id)
+      }
+    }
   }
 </script>
 

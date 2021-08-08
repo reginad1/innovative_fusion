@@ -28,7 +28,14 @@
 
 
 <script>
+import Vue from 'vue'
+import Vuetify from "vuetify"
+import "vuetify/dist/vuetify.min.css";
+import 'material-design-icons'
 import faculty from "./packs/components/faculty/faculty_members.vue";
+
+Vue.use(Vuetify);
+
 export default {
   data: function() {
     return {

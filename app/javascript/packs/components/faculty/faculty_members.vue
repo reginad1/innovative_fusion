@@ -1,9 +1,9 @@
 <template>
-  <v-container class="grey lighten-5">
+  <div style="padding:15px;">
     <groupA/>
     <groupB/>
     <groupC/>
-  </v-container>
+  </div>
 </template>
 
 
