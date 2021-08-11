@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <div>
     <v-toolbar
       color="cyan"
       dark
@@ -20,7 +20,9 @@
     <v-tabs-items v-model="tabs">
       <v-tab-item>
         <v-card flat>
-          <about/>
+          <v-container>
+            <about/>
+          </v-container>
         </v-card>
       </v-tab-item>
       <v-tab-item>
@@ -30,11 +32,13 @@
       </v-tab-item>
       <v-tab-item>
         <v-card flat>
-          <bookingInfo/>
+          <v-container>
+            <bookingInfo/>
+          </v-container>
         </v-card>
       </v-tab-item>
     </v-tabs-items>
-  </v-card>
+  </div>
 </template>
 
 
