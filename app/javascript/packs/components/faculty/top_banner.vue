@@ -23,7 +23,9 @@
           <v-card-title class="justify-center">
             Maryann DeAngelis
           </v-card-title>
-
+          <v-card-subtitle height="150px;">
+            Owner & Director
+          </v-card-subtitle>
           <v-card-subtitle height="150px;">
             Lyrical, Contemporary, Improv, Technique, Acro
           </v-card-subtitle>
@@ -32,7 +34,7 @@
             <div>
               <v-btn
                 icon
-                @click="expandCard(faculty.id)"
+                @click="show = !show"
               >
                 <span class="material-icons">expand_more</span>
               </v-btn>
@@ -60,7 +62,8 @@
       data () {
           return {
               logo: require('./images/innovativefusion_logo_lg.jpg'),
-              maryannHeadshot: require('./images/maryann_headshot.jpg')
+              maryannHeadshot: require('./images/maryann_headshot.jpg'),
+              show: false,
           }
       }
   }
